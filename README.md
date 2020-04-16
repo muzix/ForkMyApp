@@ -1,3 +1,6 @@
+## Prerequisites ###
+Install [Homebrew](https://brew.sh/)
+
 ## 🚀 Launch Manual 101 📱 ##
 ```
 curl -L https://raw.githubusercontent.com/muzix/ForkMyApp/master/launch.sh | bash -s -- MyKillerApp
