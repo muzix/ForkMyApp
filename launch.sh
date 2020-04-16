@@ -13,6 +13,11 @@ else
     exit 1
 fi
 
+# Download template project from github
+git clone "https://github.com/muzix/ForkMyApp.git" $1
+cd $1
+rm -Rf .git 
+
 if [ -e "Mintfile" ]; then
   install_current mint
   mint bootstrap
