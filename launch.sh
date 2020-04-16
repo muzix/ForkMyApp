@@ -21,11 +21,11 @@ rm -Rf .git
 if [ -e "Mintfile" ]; then
   install_current mint
   mint bootstrap
-  mint run carthage carthage update --platform iOS --no-use-binaries --cache-builds
 fi
 
 mv ForkApp $1
 mv ForkAppTests "$1Tests"
 sed -i '' "s/#PROJECT_NAME#/$1/g" project.yml
+mint run carthage carthage bootstrap --platform iOS --no-use-binaries --cache-builds
 mint run xcodegen
 
